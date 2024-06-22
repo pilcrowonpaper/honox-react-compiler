@@ -1,0 +1,26 @@
+{
+  "name": "basic",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build --mode client && vite build",
+    "preview": "wrangler pages dev",
+    "deploy": "$npm_execpath run build && wrangler pages deploy"
+  },
+  "private": true,
+  "dependencies": {
+    "@babel/preset-typescript": "^7.24.7",
+    "babel-plugin-react-compiler": "0.0.0-experimental-938cd9a-20240601",
+    "hono": "^4.4.7",
+    "honox": "^0.1.23",
+    "react": "19.0.0-rc-3563387fe3-20240621",
+    "vite-plugin-babel": "^1.2.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240529.0",
+    "@hono/vite-cloudflare-pages": "^0.4.1",
+    "@hono/vite-dev-server": "^0.12.1",
+    "vite": "^5.2.12",
+    "wrangler": "^3.57.2"
+  }
+}
